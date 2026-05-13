@@ -1,0 +1,172 @@
+
+<h2 class="sr-only">英文科三師資架構與學生分流邏輯一頁報告</h2>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans TC', sans-serif; background: #F7F7F7; color: #1a1a1a; }
+  .page { max-width: 860px; margin: 0 auto; padding: 28px 24px; }
+  .header { background: #6B1F4E; color: white; border-radius: 10px; padding: 20px 24px; margin-bottom: 20px; }
+  .header h1 { font-size: 18px; font-weight: 900; letter-spacing: 0.5px; }
+  .header p { font-size: 12px; color: rgba(255,255,255,0.75); margin-top: 4px; }
+  .section-title { font-size: 11px; font-weight: 700; color: #888; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px; }
+  .teachers { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .teacher-card { background: white; border-radius: 10px; padding: 16px; border-top: 4px solid; }
+  .teacher-card.penny { border-color: #1A73A7; }
+  .teacher-card.gary { border-color: #E8A020; }
+  .teacher-card.josh { border-color: #6B1F4E; }
+  .teacher-name { font-size: 15px; font-weight: 900; margin-bottom: 2px; }
+  .teacher-card.penny .teacher-name { color: #1A73A7; }
+  .teacher-card.gary .teacher-name { color: #E8A020; }
+  .teacher-card.josh .teacher-name { color: #6B1F4E; }
+  .teacher-role { font-size: 11px; color: #888; margin-bottom: 10px; }
+  .teacher-job { font-size: 12px; color: #333; line-height: 1.6; }
+  .teacher-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 20px; margin-top: 10px; }
+  .gary-badge { background: #FFF3DC; color: #C07800; }
+  .josh-badge { background: #6B1F4E; color: white; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 20px; margin-top: 10px; display: inline-block; }
+  .penny-badge { background: #E3F0F8; color: #1A73A7; }
+  .srl-section { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .srl-box { background: white; border-radius: 10px; padding: 16px; }
+  .srl-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .srl-table th { background: #F0EBF0; color: #6B1F4E; font-weight: 700; padding: 8px 10px; text-align: left; font-size: 11px; }
+  .srl-table td { padding: 8px 10px; border-bottom: 1px solid #F0F0F0; vertical-align: middle; }
+  .srl-table tr:last-child td { border-bottom: none; }
+  .dim-tag { font-weight: 700; }
+  .gary-t { color: #E8A020; }
+  .josh-t { color: #6B1F4E; }
+  .penny-t { color: #1A73A7; }
+  .flow-box { background: white; border-radius: 10px; padding: 16px; margin-bottom: 20px; }
+  .flow-rows { display: flex; flex-direction: column; gap: 10px; }
+  .flow-row { display: flex; align-items: center; gap: 6px; }
+  .flow-q { background: #6B1F4E; color: white; border-radius: 6px; padding: 7px 12px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+  .flow-ans { font-size: 11px; color: #888; white-space: nowrap; }
+  .arrow-r { font-size: 14px; color: #BBB; }
+  .flow-result { border-radius: 6px; padding: 6px 12px; font-size: 11px; font-weight: 700; }
+  .indent { margin-left: 20px; }
+  .combo-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+  .combo-card { border-radius: 8px; padding: 12px 14px; font-size: 12px; }
+  .combo-title { font-weight: 700; margin-bottom: 4px; color: #333; }
+  .combo-who { color: #888; font-size: 11px; margin-bottom: 6px; }
+  .combo-pills { display: flex; gap: 5px; flex-wrap: wrap; }
+  .pill { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+  .pg { background: #FFF3DC; color: #C07800; }
+  .pj { background: #F2E8F0; color: #6B1F4E; }
+  .pp { background: #E3F0F8; color: #1A73A7; }
+</style>
+
+<div class="page">
+
+  <div class="header">
+    <h1>英文科三師資架構 × 學生分流邏輯</h1>
+    <p>為什麼需要三個老師？誰適合哪個組合？如何分流？</p>
+  </div>
+
+  <p class="section-title">三位老師的核心定位</p>
+  <div class="teachers">
+    <div class="teacher-card penny">
+      <div class="teacher-name">Penny</div>
+      <div class="teacher-role">解題 × 考試落地（建中 20 年）</div>
+      <div class="teacher-job">針對學測考題結構，把英文能力轉化為<strong>實際分數</strong>，讓家長看到有感結果。</div>
+      <span class="teacher-badge penny-badge">分數體現</span>
+    </div>
+    <div class="teacher-card gary">
+      <div class="teacher-name">Gary</div>
+      <div class="teacher-role">英文素養 × 舞台魅力</div>
+      <div class="teacher-job">豐富的文章輸入、華麗詞彙，讓對英文沒感覺的學生重新<strong>有動機</strong>接觸英文。</div>
+      <span class="teacher-badge gary-badge">點火</span>
+    </div>
+    <div class="teacher-card josh">
+      <div class="teacher-name">Josh（GR）</div>
+      <div class="teacher-role">教練 × AI 個人化追蹤</div>
+      <div class="teacher-job">訓練學習技能、提升後設認知，用 <strong>AI 追蹤</strong>讓每位學生看見自己真實的進步曲線。</div>
+      <span class="josh-badge">訓練技能</span>
+    </div>
+  </div>
+
+  <div class="srl-section">
+    <div class="srl-box">
+      <p class="section-title">SRL 自主學習三層次</p>
+      <table class="srl-table">
+        <tr>
+          <th>缺口</th><th>學生的真實問題</th><th>對應老師</th>
+        </tr>
+        <tr>
+          <td><span class="dim-tag penny-t">認知能力低</span></td>
+          <td>「學了但分數沒跟上」</td>
+          <td><span class="dim-tag penny-t">Penny</span></td>
+        </tr>
+        <tr>
+          <td><span class="dim-tag gary-t">動機低</span></td>
+          <td>「我不想讀英文」</td>
+          <td><span class="dim-tag gary-t">Gary</span></td>
+        </tr>
+        <tr>
+          <td><span class="dim-tag josh-t">後設認知低</span></td>
+          <td>「我不知道怎麼學」</td>
+          <td><span class="dim-tag josh-t">Josh</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="srl-box">
+      <p class="section-title">三種組合</p>
+      <div class="combo-grid">
+        <div class="combo-card" style="background:#FFFBF0;">
+          <div class="combo-title">有基礎，考試想更進一步</div>
+          <div class="combo-who">有自己的讀書方法，但分數還沒到位</div>
+          <div class="combo-pills">
+            <span class="pill pp">Penny</span><span class="pill pg">Gary</span>
+          </div>
+        </div>
+        <div class="combo-card" style="background:#EBF3F9;">
+          <div class="combo-title">英文弱，沒有方向</div>
+          <div class="combo-who">不知道該怎麼進步</div>
+          <div class="combo-pills">
+            <span class="pill pp">Penny</span><span class="pill pj">Josh</span>
+          </div>
+        </div>
+        <div class="combo-card" style="background:#F7F0F5;">
+          <div class="combo-title">基礎不好、語感弱</div>
+          <div class="combo-who">需要大量接觸文章，也需要更好的方法</div>
+          <div class="combo-pills">
+            <span class="pill pg">Gary</span><span class="pill pj">Josh</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flow-box">
+    <p class="section-title">三題分流診斷</p>
+    <div class="flow-rows">
+      <div class="flow-row">
+        <span class="flow-q">Q1　你對英文有沒有想學的感覺？</span>
+        <span class="arrow-r">→</span>
+        <span class="flow-ans">沒有</span>
+        <span class="arrow-r">→</span>
+        <span class="flow-result" style="background:#FFF3DC;color:#C07800;">Gary 優先</span>
+      </div>
+      <div class="flow-row indent">
+        <span class="flow-ans" style="color:#6B1F4E;font-weight:700;">有 ↓</span>
+      </div>
+      <div class="flow-row indent">
+        <span class="flow-q">Q2　你對自己學英文的方法有自信嗎？</span>
+        <span class="arrow-r">→</span>
+        <span class="flow-ans">沒有</span>
+        <span class="arrow-r">→</span>
+        <span class="flow-result" style="background:#F2E8F0;color:#6B1F4E;">Josh 核心</span>
+      </div>
+      <div class="flow-row" style="margin-left:40px;">
+        <span class="flow-ans" style="color:#6B1F4E;font-weight:700;">有 ↓</span>
+      </div>
+      <div class="flow-row" style="margin-left:40px;">
+        <span class="flow-q">Q3　學了之後，考試分數有跟上嗎？</span>
+        <span class="arrow-r">→</span>
+        <span class="flow-ans">沒有</span>
+        <span class="arrow-r">→</span>
+        <span class="flow-result" style="background:#E3F0F8;color:#1A73A7;">Penny 核心</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;font-size:10px;color:#BBB;margin-top:4px;">IGC 英文科架構 × 2026</div>
+</div>
